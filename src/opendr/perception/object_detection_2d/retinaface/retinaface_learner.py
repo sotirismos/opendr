@@ -45,22 +45,22 @@ from mxnet.module import Module
 from urllib.request import urlretrieve
 
 # OpenDR engine imports
-from opendr.engine.learners import Learner
-from opendr.engine.data import Image
-from opendr.engine.target import BoundingBox, BoundingBoxList
-from opendr.engine.constants import OPENDR_SERVER_URL
+from opendr.src.opendr.engine.learners import Learner
+from opendr.src.opendr.engine.data import Image
+from opendr.src.opendr.engine.target import BoundingBox, BoundingBoxList
+from opendr.src.opendr.engine.constants import OPENDR_SERVER_URL
 
-from opendr.perception.object_detection_2d.retinaface.algorithm.models.retinaface import RetinaFace
-from opendr.perception.object_detection_2d.retinaface.algorithm.utils.load_data import load_gt_roidb
-from opendr.perception.object_detection_2d.retinaface.algorithm.core.loader import CropLoader
-from opendr.perception.object_detection_2d.retinaface.algorithm.core import metric
-from opendr.perception.object_detection_2d.retinaface.algorithm.config import config, generate_config
-from opendr.perception.object_detection_2d.retinaface.algorithm.symbol.symbol_resnet import get_resnet_train
-from opendr.perception.object_detection_2d.retinaface.algorithm.logger import logger
-from opendr.perception.object_detection_2d.retinaface.algorithm.eval_recall import FaceDetectionRecallMetric
-from opendr.perception.object_detection_2d.datasets.detection_dataset import DetectionDataset
-from opendr.perception.object_detection_2d.datasets.wider_face import WiderFaceDataset
-from opendr.perception.object_detection_2d.datasets.transforms import BoundingBoxListToNumpyArray
+from opendr.src.opendr.perception.object_detection_2d.retinaface.algorithm.models.retinaface import RetinaFace
+from opendr.src.opendr.perception.object_detection_2d.retinaface.algorithm.utils.load_data import load_gt_roidb
+from opendr.src.opendr.perception.object_detection_2d.retinaface.algorithm.core.loader import CropLoader
+from opendr.src.opendr.perception.object_detection_2d.retinaface.algorithm.core import metric
+from opendr.src.opendr.perception.object_detection_2d.retinaface.algorithm.config import config, generate_config
+from opendr.src.opendr.perception.object_detection_2d.retinaface.algorithm.symbol.symbol_resnet import get_resnet_train
+from opendr.src.opendr.perception.object_detection_2d.retinaface.algorithm.logger import logger
+from opendr.src.opendr.perception.object_detection_2d.retinaface.algorithm.eval_recall import FaceDetectionRecallMetric
+from opendr.src.opendr.perception.object_detection_2d.datasets.detection_dataset import DetectionDataset
+from opendr.src.opendr.perception.object_detection_2d.datasets.wider_face import WiderFaceDataset
+from opendr.src.opendr.perception.object_detection_2d.datasets.transforms import BoundingBoxListToNumpyArray
 
 
 class RetinaFaceLearner(Learner):
